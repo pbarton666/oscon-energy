@@ -1,0 +1,10 @@
+/home/pat/workspace/nupic/bin/testpyhtm
+/home/pat/workspace/nupic/nupic/libcpp_region.so
+/home/pat/workspace/nupic/nupic/bindings/_engine_internal.so
+/home/pat/workspace/nupic/nupic/bindings/engine_internal.py
+/home/pat/workspace/nupic/nupic/bindings/_math.so
+/home/pat/workspace/nupic/nupic/bindings/math.py
+/home/pat/workspace/nupic/nupic/bindings/_algorithms.so
+/home/pat/workspace/nupic/nupic/bindings/algorithms.py
+/home/pat/workspace/nupic/nupic/bindings/_iorange.so
+/home/pat/workspace/nupic/nupic/bindings/iorange.py

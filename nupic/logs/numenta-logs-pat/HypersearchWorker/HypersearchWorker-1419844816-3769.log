@@ -1,0 +1,65 @@
+2014-12-28 17:20:16,805 - com.numenta.nupic.swarming.HypersearchWorker(3769) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1023']
+2014-12-28 17:20:16,806 - com.numenta.nupic.swarming.HypersearchWorker(3769) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2014-12-28 17:20:16,806 - com.numenta.nupic.database.Connection.ConnectionFactory(3769) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2014-12-28 17:20:16,828 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(3769) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2014-12-28 17:20:16,842 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(3769) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=50
+2014-12-28 17:20:16,851 - com.numenta.nupic.swarming.HypersearchWorker(3769) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1023', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "\xd8_\x92\xb9\x8e\xf8\x11\xe4\x89\xa4\x08\x00'\x16\xdf\xd4", 'genBaseDescription': '# --------------------------------------------------------------...', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "d85...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2014-12-29 01:20:16', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2014-12-28 17:20:16,857 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(3769) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'temp',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '34.0',
+                                       u'minValue': '6.0'},
+                                      {u'fieldName': 'dewpt',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '22.0',
+                                       u'minValue': '-22.0'},
+                                      {u'fieldName': 'wind',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '14.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'is_daylight',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '1',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'elapsed',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '86400',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'kwh',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '5.18',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'kwh',
+                                     u'predictionSteps': ['1']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kw_energy_consumption',
+                                 u'streams': [{u'columns': ['*'],
+                                               u'info': 'San Diego',
+                                               u'source': 'file://sd_weather.csv'}],
+                                 u'version': '1'},
+                  u'swarmSize': 'small'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': 'd85f92b8-8ef8-11e4-89a4-08002716dfd4',
+ u'useTerminators': 'False'}
+2014-12-28 17:20:17,028 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(3769) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> Ready to end hyperseach, but not all models have matured yet. Sleeping a bit to wait for all models to mature.
+2014-12-28 17:20:20,237 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(3769) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> Exiting because some worker set the workerCompletionReason to error. WorkerCompletionMsg: E10002: Exiting due to receiving too many models failing from exceptions (6 out of 6). 
+Model Exception: Exception occurred while running model 2532: Exception(u'Invalid file format: different number of fields in the header rows of file /home/pat/workspace/nupic/examples/opf/clients/hotgym/prediction/diego_weather/sd_weather.csv (7, 7, 8)',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 298, in _openStream
+    firstRecord=firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/file_record_stream.py", line 195, in __init__
+    (streamID, len(names), len(types), len(specials)))
+Exception: Invalid file format: different number of fields in the header rows of file /home/pat/workspace/nupic/examples/opf/clients/hotgym/prediction/diego_weather/sd_weather.csv (7, 7, 8)
+
+2014-12-28 17:20:20,246 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(3769) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> Successfully updated the field contributions:{u'kwh': nan}
+2014-12-28 17:20:20,246 - com.numenta.nupic.swarming.HypersearchWorker(3769) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=50, JOBID=1023> FINISHED. Evaluated 0 models.

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -fPIC -m64 -std=c++11  -L/home/pat/workspace/nupic/extensions/core/build/release/lib -lyaml-cpp -L/home/pat/.envs/nupic/lib   -shared -Wl,-soname,_engine_internal.so -o _engine_internal.so CMakeFiles/_engine_internal.dir/temp/extensions/bindings/py/engine_internal/EngineInternalPyPYTHON_wrap.cxx.o -ldl -lpython2.7 -lnupic_core libpy_support.a 

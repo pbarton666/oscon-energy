@@ -1,0 +1,45 @@
+2015-06-30 09:38:56,352 - com.numenta.nupic.swarming.HypersearchWorker(5989) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1032']
+2015-06-30 09:38:56,352 - com.numenta.nupic.swarming.HypersearchWorker(5989) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-06-30 09:38:56,352 - com.numenta.nupic.database.Connection.ConnectionFactory(5989) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-06-30 09:38:56,375 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(5989) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-06-30 09:38:56,395 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(5989) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=76
+2015-06-30 09:38:56,402 - com.numenta.nupic.swarming.HypersearchWorker(5989) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1032', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': '{"sprints": [{"status": "active", "bestModelId": null, "bestErrS...', 'workerCompletionMsg': 'None', 'jobHash': "\x7f\xc0\x87\x97\x1fF\x11\xe5\x97X\x08\x00'\x16\xdf\xd4", 'genBaseDescription': '# --------------------------------------------------------------...', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "7fc...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-06-30 16:38:56', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': '# --------------------------------------------------------------...', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-06-30 09:38:56,404 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5989) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'euse',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '35.0',
+                                       u'minValue': '10.0'}],
+                  u'inferenceArgs': {u'predictedField': 'euse',
+                                     u'predictionSteps': ['4']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kwh',
+                                 u'streams': [{u'columns': ['timestamp',
+                                                            'euse'],
+                                               u'info': 'energy_only_252',
+                                               u'source': 'file:///home/pat/workspace/pecan/house_data/252_data/252_clean_d...'}]},
+                  u'swarmSize': 'small'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '7fc08796-1f46-11e5-9758-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-06-30 09:38:56,701 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5989) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> Ready to end hyperseach, but not all models have matured yet. Sleeping a bit to wait for all models to mature.
+2015-06-30 09:38:59,934 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5989) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> Exiting because some worker set the workerCompletionReason to error. WorkerCompletionMsg: E10002: Exiting due to receiving too many models failing from exceptions (6 out of 6). 
+Model Exception: Exception occurred while running model 3303: Exception(u'Invalid file format for "/home/pat/workspace/pecan/house_data/252_data/252_clean_data.csv" - field type "2013-03-10 01:00:00" not one of (\'string\', \'datetime\', \'int\', \'float\', \'bool\', \'sdr\') ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 298, in _openStream
+    firstRecord=firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/file_record_stream.py", line 209, in __init__
+    'not one of %s ' % (self._filename, t, allowedTypes))
+Exception: Invalid file format for "/home/pat/workspace/pecan/house_data/252_data/252_clean_data.csv" - field type "2013-03-10 01:00:00" not one of ('string', 'datetime', 'int', 'float', 'bool', 'sdr') 
+
+2015-06-30 09:38:59,950 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5989) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> Successfully updated the field contributions:{u'euse': nan}
+2015-06-30 09:38:59,951 - com.numenta.nupic.swarming.HypersearchWorker(5989) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=76, JOBID=1032> FINISHED. Evaluated 0 models.

@@ -1,0 +1,44 @@
+2014-12-27 11:17:24,302 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1016']
+2014-12-27 11:17:24,302 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2014-12-27 11:17:24,302 - com.numenta.nupic.database.Connection.ConnectionFactory(7479) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2014-12-27 11:17:24,305 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(7479) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2014-12-27 11:17:24,313 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(7479) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=118
+2014-12-27 11:17:24,315 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1016', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "\xfc\x9f\xbf\x7f\x8d\xfc\x11\xe4\x9c\x1f\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "fc9...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2014-12-27 19:17:23', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2014-12-27 11:17:24,316 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'kw_energy_consumption',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '5.18',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'kw_energy_consumption',
+                                     u'predictionSteps': ['1']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kw_energy_consumption',
+                                 u'streams': [{u'columns': ['*'],
+                                               u'info': 'San Diego',
+                                               u'source': 'file://sandiego.csv'}],
+                                 u'version': '1'},
+                  u'swarmSize': 'small'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': 'fc9fbf7e-8dfc-11e4-9c1f-08002716dfd4',
+ u'useTerminators': 'False'}
+2014-12-27 11:17:24,441 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Active swarms changed to [u'modelParams|sensorParams|encoders|kw_energy_consumption'] (from None)
+2014-12-27 11:17:24,486 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> RUNNING MODEL GID=1648, paramsHash=2006086f3fd241742205c6581012c02b, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, u'modelParams|sensorParams|encoders|kw_energy_consumption:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|kw_energy_consumption', 'id': '118.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 5.18, 'classifierOnly': True, 'minval': 0.0, 'clipInput': True, 'n': 275, 'fieldname': 'kw_energy_consumption', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_timeOfDay': None, u'timestamp_dayOfWeek': None, u'kw_energy_consumption': {'maxval': 5.18, 'name': 'kw_energy_consumption', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'kw_energy_consumption', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2014-12-27 11:17:24,492 - com.numenta.nupic.hypersearch.utils(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Using experiment directory: /tmp/tmp4TE1M0
+2014-12-27 11:17:26,128 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=2; elapsed=0.000759840011597 sec.
+2014-12-27 11:17:26,153 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000144004821777 sec.
+2014-12-27 11:17:26,176 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000127077102661 sec.
+2014-12-27 11:17:26,191 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000169038772583 sec.
+2014-12-27 11:17:26,208 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000150203704834 sec.
+2014-12-27 11:17:26,229 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000141143798828 sec.
+2014-12-27 11:17:26,244 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000164985656738 sec.
+2014-12-27 11:17:26,263 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Flushed prediction cache; numrows=1; elapsed=0.000147819519043 sec.
+2014-12-27 11:17:26,263 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Finished: modelID=1648; 9 records processed. Performing final activities
+2014-12-27 11:17:26,276 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Model 1648 chosen as best model
+2014-12-27 11:17:26,280 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> COMPLETED MODEL GID=1648; EVALUATED 1 MODELs
+2014-12-27 11:17:26,283 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> New best model after 1 evaluations: errScore 19.4175 on model 1648
+2014-12-27 11:17:26,290 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> Successfully updated the field contributions:{u'kw_energy_consumption': 0.0}
+2014-12-27 11:17:26,290 - com.numenta.nupic.swarming.HypersearchWorker(7479) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=118, JOBID=1016> FINISHED. Evaluated 1 models.

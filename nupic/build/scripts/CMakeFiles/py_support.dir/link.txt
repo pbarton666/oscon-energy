@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpy_support.a  CMakeFiles/py_support.dir/extensions/py_support/NumpyVector.cpp.o CMakeFiles/py_support.dir/extensions/py_support/PyArray.cpp.o CMakeFiles/py_support.dir/extensions/py_support/PyHelpers.cpp.o CMakeFiles/py_support.dir/extensions/py_support/PythonStream.cpp.o
+/usr/bin/ranlib libpy_support.a

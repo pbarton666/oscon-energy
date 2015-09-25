@@ -1,0 +1,135 @@
+2015-06-30 09:16:10,187 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1030']
+2015-06-30 09:16:10,190 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-06-30 09:16:10,190 - com.numenta.nupic.database.Connection.ConnectionFactory(5905) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-06-30 09:16:10,205 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(5905) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-06-30 09:16:10,226 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(5905) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=67
+2015-06-30 09:16:10,229 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1030', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "Qy\xc0O\x1fC\x11\xe5\x97X\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "517...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-06-30 16:16:09', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-06-30 09:16:10,232 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'euse',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '35.0',
+                                       u'minValue': '10.0'}],
+                  u'inferenceArgs': {u'predictedField': 'euse',
+                                     u'predictionSteps': ['4']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kwh',
+                                 u'streams': [{u'columns': ['timestamp',
+                                                            'euse'],
+                                               u'info': 'energy_only_252',
+                                               u'source': '/home/pat/workspace/pecan/house_data/252_data/252_clean_data.csv'}]},
+                  u'swarmSize': 'small'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '5179c04e-1f43-11e5-9758-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-06-30 09:16:10,448 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Active swarms changed to [u'modelParams|sensorParams|encoders|euse'] (from None)
+2015-06-30 09:16:10,509 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> RUNNING MODEL GID=3182, paramsHash=507d0ba6bd8a1885ca1e4857d7ee15aa, params={'particleState': {'varStates': {u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 22, 'bestPosition': 22, '_position': 22.0, 'velocity': -99.8}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.0001, 'bestPosition': 0.0001, '_position': 0.0001, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 9, 'bestPosition': 9, '_position': 9.0, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 12, 'bestPosition': 12, '_position': 12.0, 'velocity': -0.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 1, 'bestPosition': 1, '_position': 1.0, 'velocity': -0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 28, 'bestPosition': 28, '_position': 28.0, 'velocity': -98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.10000000000000001, 'bestPosition': 0.10000000000000001, '_position': 0.10000000000000001, 'velocity': -0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': '67.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 28, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 10.0, 'n': 22, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.10000000000000001}, 'tpParams': {'minThreshold': 9, 'activationThreshold': 12, 'pamLength': 1}, 'clParams': {'alpha': 0.0001}}}}
+2015-06-30 09:16:10,512 - com.numenta.nupic.hypersearch.utils(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Using experiment directory: /tmp/tmpe9Gb80
+2015-06-30 09:16:10,552 - com.numenta.nupic.hypersearch.utils(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Exception occurred while running model 3182: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:10,600 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> COMPLETED MODEL GID=3182; EVALUATED 1 MODELs
+2015-06-30 09:16:10,695 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> RUNNING MODEL GID=3198, paramsHash=18e2da62253fb38effeef3188ec3e860, params={'particleState': {'varStates': {u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 521, 'bestPosition': 521, '_position': 521.0, 'velocity': -99.8}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.10000000000000001, 'bestPosition': 0.10000000000000001, '_position': 0.10000000000000001, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 12, 'bestPosition': 12, '_position': 12.0, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 16, 'bestPosition': 16, '_position': 16.0, 'velocity': -0.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 5, 'bestPosition': 5, '_position': 5.0, 'velocity': -0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 521, 'bestPosition': 521, '_position': 521.0, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.00029999999999999997, 'bestPosition': 0.00029999999999999997, '_position': 0.00029999999999999997, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': '67.10'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 521, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 10.0, 'n': 521, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.00029999999999999997}, 'tpParams': {'minThreshold': 12, 'activationThreshold': 16, 'pamLength': 5}, 'clParams': {'alpha': 0.10000000000000001}}}}
+2015-06-30 09:16:10,696 - com.numenta.nupic.hypersearch.utils(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Using experiment directory: /tmp/tmp2Jrdyn
+2015-06-30 09:16:10,723 - com.numenta.nupic.hypersearch.utils(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Exception occurred while running model 3198: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:10,734 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> COMPLETED MODEL GID=3198; EVALUATED 2 MODELs
+2015-06-30 09:16:10,747 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Completed generation #0 of swarm 'modelParams|sensorParams|encoders|euse' with a best errScore of inf
+2015-06-30 09:16:10,823 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> RUNNING MODEL GID=3214, paramsHash=8e31bf9920c1a98714120b76b21e58a4, params={'particleState': {'varStates': {u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 296, 'bestPosition': 272, '_position': 296.45, 'velocity': 24.95}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.055045000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.055045000000000004, 'velocity': 0.004995}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.65, 'velocity': 0.15}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.2, 'velocity': 0.2}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.2, 'velocity': 0.2}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 299, 'bestPosition': 275, '_position': 299.15, 'velocity': 24.65}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.055135, 'bestPosition': 0.05015, '_position': 0.055135, 'velocity': 0.004985000000000001}}, 'genIdx': 1, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': u'65.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 299, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 10.0, 'n': 296, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.055135}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.055045000000000004}}}}
+2015-06-30 09:16:10,823 - com.numenta.nupic.hypersearch.utils(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Using experiment directory: /tmp/tmpGEVlxA
+2015-06-30 09:16:10,855 - com.numenta.nupic.hypersearch.utils(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Exception occurred while running model 3214: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:10,865 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> COMPLETED MODEL GID=3214; EVALUATED 3 MODELs
+2015-06-30 09:16:10,986 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> RUNNING MODEL GID=3215, paramsHash=76fb2ea3a6eddef004330513b7a0375c, params={'particleState': {'varStates': {u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 22, 'bestPosition': 22, '_position': 22, 'velocity': -24.95}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.0050950000000000006, 'bestPosition': 0.0001, '_position': 0.0050950000000000006, 'velocity': 0.0049950000000000003}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 9, 'bestPosition': 9, '_position': 9.1500000000000004, 'velocity': 0.15}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 12, 'bestPosition': 12, '_position': 12, 'velocity': -0.2}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 1, 'bestPosition': 1, '_position': 1, 'velocity': -0.2}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 28, 'bestPosition': 28, '_position': 28, 'velocity': -24.65}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.095015000000000002, 'bestPosition': 0.10000000000000001, '_position': 0.095015000000000002, 'velocity': -0.0049850000000000007}}, 'genIdx': 1, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': '67.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 28, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 10.0, 'n': 22, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.095015000000000002}, 'tpParams': {'minThreshold': 9, 'activationThreshold': 12, 'pamLength': 1}, 'clParams': {'alpha': 0.0050950000000000006}}}}
+2015-06-30 09:16:10,988 - com.numenta.nupic.hypersearch.utils(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Using experiment directory: /tmp/tmpuKElmX
+2015-06-30 09:16:11,004 - com.numenta.nupic.hypersearch.utils(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Exception occurred while running model 3215: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:11,010 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> COMPLETED MODEL GID=3215; EVALUATED 4 MODELs
+2015-06-30 09:16:11,062 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> RUNNING MODEL GID=3226, paramsHash=df67ae8295300bc597b490ce4180d2da, params={'particleState': {'varStates': {u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 496, 'bestPosition': 521, '_position': 496.05000000000001, 'velocity': -24.95}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.1, 'bestPosition': 0.10000000000000001, '_position': 0.1, 'velocity': 0.0049950000000000003}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 12, 'bestPosition': 12, '_position': 12, 'velocity': 0.15}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 16, 'bestPosition': 16, '_position': 15.800000000000001, 'velocity': -0.2}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 5, 'bestPosition': 5, '_position': 4.7999999999999998, 'velocity': -0.2}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 521, 'bestPosition': 521, '_position': 521, 'velocity': 24.65}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.0052850000000000006, 'bestPosition': 0.00029999999999999997, '_position': 0.0052850000000000006, 'velocity': 0.0049850000000000007}}, 'genIdx': 1, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': '67.10'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 521, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 10.0, 'n': 496, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.0052850000000000006}, 'tpParams': {'minThreshold': 12, 'activationThreshold': 16, 'pamLength': 5}, 'clParams': {'alpha': 0.1}}}}
+2015-06-30 09:16:11,062 - com.numenta.nupic.hypersearch.utils(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Using experiment directory: /tmp/tmpYGx5oF
+2015-06-30 09:16:11,071 - com.numenta.nupic.hypersearch.utils(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Exception occurred while running model 3226: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:11,080 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> COMPLETED MODEL GID=3226; EVALUATED 5 MODELs
+2015-06-30 09:16:11,085 - com.numenta.nupic.swarming.HypersearchV2.SwarmTerminator(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Swarm modelParams|sensorParams|encoders|euse has matured (no change in 2 generations).Stopping...
+2015-06-30 09:16:11,085 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Completed generation #1 of swarm 'modelParams|sensorParams|encoders|euse' with a best errScore of inf. Matured swarm(s): [u'modelParams|sensorParams|encoders|euse']
+2015-06-30 09:16:11,089 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Swarm matured: modelParams|sensorParams|encoders|euse. Score at generation 1: inf
+2015-06-30 09:16:11,092 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Active swarms changed to [] (from [u'modelParams|sensorParams|encoders|euse'])
+2015-06-30 09:16:11,094 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> E10002: Exiting due to receiving too many models failing from exceptions (6 out of 6). 
+Model Exception: Exception occurred while running model 3171: Exception(u'Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of ',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 237, in run
+    maxTimeout=readTimeout)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 210, in __init__
+    self._openStream(dataUrl, isBlocking, maxTimeout, bookmark, firstRecordIdx)
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 294, in _openStream
+    self._recordStoreName = findDataset(dataUrl[len(FILE_PREF):])
+  File "/home/pat/workspace/nupic/nupic/data/datasethelpers.py", line 79, in findDataset
+    (datasetPath, os.environ.get('NTA_DATA_PATH', '')))
+Exception: Unable to locate: at/workspace/pecan/house_data/252_data/252_clean_data.csv using NTA_DATA_PATH of 
+
+2015-06-30 09:16:11,103 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> Successfully updated the field contributions:{u'euse': nan}
+2015-06-30 09:16:11,103 - com.numenta.nupic.swarming.HypersearchWorker(5905) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=67, JOBID=1030> FINISHED. Evaluated 5 models.

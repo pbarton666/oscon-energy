@@ -1,0 +1,52 @@
+2015-07-01 10:47:02,334 - com.numenta.nupic.swarming.HypersearchWorker(3220) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1040']
+2015-07-01 10:47:02,335 - com.numenta.nupic.swarming.HypersearchWorker(3220) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-07-01 10:47:02,335 - com.numenta.nupic.database.Connection.ConnectionFactory(3220) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-07-01 10:47:02,351 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(3220) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-07-01 10:47:02,366 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(3220) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=46
+2015-07-01 10:47:02,370 - com.numenta.nupic.swarming.HypersearchWorker(3220) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=46, JOBID=1040> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1040', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "-\x91\xbc\x1f \x19\x11\xe5\x93\x7f\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "2d9...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-07-01 17:47:01', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-07-01 10:47:02,380 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(3220) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=46, JOBID=1040> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'kw_energy_consumption',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '53.0',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'kw_energy_consumption',
+                                     u'predictionSteps': ['1']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kw_energy_consumption',
+                                 u'streams': [{u'columns': ['*'],
+                                               u'info': 'Rec Center',
+                                               u'source': 'file://rec-center-hourly.csv'}],
+                                 u'version': '1'},
+                  u'swarmSize': 'medium'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '2d91bc1e-2019-11e5-937f-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-07-01 10:47:03,445 - root(3220) - ERROR - HypersearchWorker is exiting with unhandled exception; argv=['/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py', '--jobID=1040']
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 609, in <module>
+    main(sys.argv)
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 551, in main
+    jobID = hst.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 312, in run
+    cjDAO=cjDAO, jobID=options.jobID, logLevel=options.logLevel)
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchV2.py", line 2519, in __init__
+    streamReader.getDataRowCount()
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 382, in getDataRowCount
+    record = self.getNextRecord()
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 328, in getNextRecord
+    bookmark = self._recordStore.getBookmark()
+  File "/home/pat/workspace/nupic/nupic/data/file_record_stream.py", line 476, in getBookmark
+    rowDict = dict(filepath=os.path.realpath(self._filename),
+  File "/home/pat/.envs/nupic/lib/python2.7/posixpath.py", line 382, in realpath
+    path, ok = _joinrealpath('', filename, {})
+  File "/home/pat/.envs/nupic/lib/python2.7/posixpath.py", line 407, in _joinrealpath
+    if not islink(newpath):
+  File "/home/pat/.envs/nupic/lib/python2.7/posixpath.py", line 145, in islink
+    return stat.S_ISLNK(st.st_mode)
+  File "/home/pat/.envs/nupic/lib/python2.7/stat.py", line 56, in S_ISLNK
+    return S_IFMT(mode) == S_IFLNK
+KeyboardInterrupt

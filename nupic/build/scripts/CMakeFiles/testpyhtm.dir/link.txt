@@ -1,0 +1,1 @@
+/usr/bin/c++        -fPIC -m64 -std=c++11  -L/home/pat/workspace/nupic/extensions/core/build/release/lib -lyaml-cpp -L/home/pat/.envs/nupic/lib CMakeFiles/testpyhtm.dir/extensions/htmtest/htmtest.cpp.o  -o testpyhtm -rdynamic -lnupic_core -lpthread -ldl 

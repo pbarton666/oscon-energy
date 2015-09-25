@@ -1,0 +1,1 @@
+/usr/bin/c++        -fPIC -m64 -std=c++11  -L/home/pat/workspace/nupic/extensions/core/build/release/lib -lyaml-cpp -L/home/pat/.envs/nupic/lib CMakeFiles/compare_nupic_core_version.dir/extensions/compare_nupic_core_version.cpp.o  -o compare_nupic_core_version -rdynamic -lnupic_core -lpthread -ldl 

@@ -1,0 +1,133 @@
+2015-07-18 07:20:58,312 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1044']
+2015-07-18 07:20:58,313 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-07-18 07:20:58,313 - com.numenta.nupic.database.Connection.ConnectionFactory(8292) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-07-18 07:20:58,332 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(8292) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-07-18 07:20:58,346 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8292) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=47
+2015-07-18 07:20:58,360 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1044', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "4\xc8\xb5\x19-X\x11\xe5\x98\xe1\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "34c...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-07-18 14:20:57', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-07-18 07:20:58,366 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'euse',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '35.0',
+                                       u'minValue': '10.0'},
+                                      {u'fieldName': 'temp',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '110.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'humid',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '100.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'wind',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '50.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'is_daylight',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '0.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'buildup',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '0.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'sec_since_rise',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '50000',
+                                       u'minValue': '10.0'}],
+                  u'inferenceArgs': {u'predictedField': 'euse',
+                                     u'predictionSteps': ['4']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kwh',
+                                 u'streams': [{u'columns': ['timestamp',
+                                                            'euse',
+                                                            'temp',
+                                                            'humid',
+                                                            'wind',
+                                                            'is_daylight',
+                                                            'buildup',
+                                                            'sec_since_rise'],
+                                               u'info': 'weather_plus_7531',
+                                               u'source': 'file:///home/pat/workspace/pecan/house_data/7531_data/7531_clean...'}]},
+                  u'swarmSize': 'medium'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '34c8b518-2d58-11e5-98e1-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-07-18 07:21:28,363 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Active swarms changed to [u'modelParams|sensorParams|encoders|humid', u'modelParams|sensorParams|encoders|wind', u'modelParams|sensorParams|encoders|is_daylight', u'modelParams|sensorParams|encoders|sec_since_rise', u'modelParams|sensorParams|encoders|timestamp_timeOfDay', u'modelParams|sensorParams|encoders|timestamp_dayOfWeek', u'modelParams|sensorParams|encoders|buildup', u'modelParams|sensorParams|encoders|euse', u'modelParams|sensorParams|encoders|temp', u'modelParams|sensorParams|encoders|timestamp_weekend'] (from None)
+2015-07-18 07:21:28,527 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> RUNNING MODEL GID=4381, paramsHash=bc1676bd5de23e7524a9fc9ffdeecdf2, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, u'modelParams|sensorParams|encoders|buildup:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|buildup', 'id': '47.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 275, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'humid': None, u'is_daylight': None, u'temp': None, u'sec_since_rise': None, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': None, u'buildup': {'maxval': 0.0, 'name': 'buildup', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'buildup', 'w': 21, 'type': 'ScalarEncoder'}, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2015-07-18 07:21:28,543 - com.numenta.nupic.hypersearch.utils(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Using experiment directory: /tmp/tmpiT7lkw
+2015-07-18 07:21:29,541 - com.numenta.nupic.hypersearch.utils(8292) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Exception occurred while running model 4381: Exception('The encoder for buildup is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 245, in run
+    self._model = ModelFactory.create(modelDescription)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/modelfactory.py", line 80, in create
+    return modelClass(**modelConfig['modelParams'])
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 198, in __init__
+    clParams, anomalyParams)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 1058, in __createCLANetwork
+    encoder = MultiEncoder(enabledEncoders)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 54, in __init__
+    self.addMultipleEncoders(encoderDescriptions)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 135, in addMultipleEncoders
+    self.addEncoder(fieldName, eval(encoderName)(**fieldParams))
+  File "/home/pat/workspace/nupic/nupic/encoders/scalar.py", line 212, in __init__
+    "than maxval." % (name, minval, maxval))
+Exception: The encoder for buildup is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.
+
+2015-07-18 07:21:29,570 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> COMPLETED MODEL GID=4381; EVALUATED 1 MODELs
+2015-07-18 07:21:29,836 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> RUNNING MODEL GID=4434, paramsHash=2940a6ddb09849f6fe3e5daaa506b1b0, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, u'modelParams|sensorParams|encoders|is_daylight:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|is_daylight', 'id': '47.10'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 275, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'humid': None, u'is_daylight': {'maxval': 0.0, 'name': 'is_daylight', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'is_daylight', 'w': 21, 'type': 'ScalarEncoder'}, u'temp': None, u'sec_since_rise': None, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': None, u'buildup': None, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2015-07-18 07:21:29,836 - com.numenta.nupic.hypersearch.utils(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Using experiment directory: /tmp/tmpxNDjYE
+2015-07-18 07:21:30,554 - com.numenta.nupic.hypersearch.utils(8292) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Exception occurred while running model 4434: Exception('The encoder for is_daylight is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 245, in run
+    self._model = ModelFactory.create(modelDescription)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/modelfactory.py", line 80, in create
+    return modelClass(**modelConfig['modelParams'])
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 198, in __init__
+    clParams, anomalyParams)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 1058, in __createCLANetwork
+    encoder = MultiEncoder(enabledEncoders)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 54, in __init__
+    self.addMultipleEncoders(encoderDescriptions)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 135, in addMultipleEncoders
+    self.addEncoder(fieldName, eval(encoderName)(**fieldParams))
+  File "/home/pat/workspace/nupic/nupic/encoders/scalar.py", line 212, in __init__
+    "than maxval." % (name, minval, maxval))
+Exception: The encoder for is_daylight is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.
+
+2015-07-18 07:21:30,571 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> COMPLETED MODEL GID=4434; EVALUATED 2 MODELs
+2015-07-18 07:21:30,797 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> RUNNING MODEL GID=4446, paramsHash=3f112960034340cabfbe50ec73d65d85, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, u'modelParams|sensorParams|encoders|temp:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|temp', 'id': '47.20'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 10.0, 'clipInput': True, 'n': 275, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'humid': None, u'is_daylight': None, u'temp': {'maxval': 110.0, 'name': 'temp', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'temp', 'w': 21, 'type': 'ScalarEncoder'}, u'sec_since_rise': None, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': None, u'buildup': None, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2015-07-18 07:21:30,798 - com.numenta.nupic.hypersearch.utils(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Using experiment directory: /tmp/tmpaQv6Bv
+2015-07-18 08:28:31,952 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Model 4446 canceled because Job 1044 was stopped.
+2015-07-18 08:28:31,963 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Finished: modelID=4446; 12300 records processed. Performing final activities
+2015-07-18 08:28:32,017 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> COMPLETED MODEL GID=4446; EVALUATED 3 MODELs
+2015-07-18 08:28:32,054 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> New best model after 6 evaluations: errScore 59.595 on model 4402
+2015-07-18 08:28:32,108 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8292) - ERROR - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Exiting because some worker set the workerCompletionReason to error. WorkerCompletionMsg: E10002: Exiting due to receiving too many models failing from exceptions (2 out of 6). 
+Model Exception: Exception occurred while running model 4434: Exception('The encoder for is_daylight is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.',) (<type 'exceptions.Exception'>)
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/utils.py", line 430, in runModelGivenBaseAndParams
+    (completionReason, completionMsg) = runner.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/ModelRunner.py", line 245, in run
+    self._model = ModelFactory.create(modelDescription)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/modelfactory.py", line 80, in create
+    return modelClass(**modelConfig['modelParams'])
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 198, in __init__
+    clParams, anomalyParams)
+  File "/home/pat/workspace/nupic/nupic/frameworks/opf/clamodel.py", line 1058, in __createCLANetwork
+    encoder = MultiEncoder(enabledEncoders)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 54, in __init__
+    self.addMultipleEncoders(encoderDescriptions)
+  File "/home/pat/workspace/nupic/nupic/encoders/multi.py", line 135, in addMultipleEncoders
+    self.addEncoder(fieldName, eval(encoderName)(**fieldParams))
+  File "/home/pat/workspace/nupic/nupic/encoders/scalar.py", line 212, in __init__
+    "than maxval." % (name, minval, maxval))
+Exception: The encoder for is_daylight is invalid. minval 0.0 is greater than or equal to maxval 0.0. minval must be strictly less than maxval.
+
+2015-07-18 08:28:32,145 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> Successfully updated the field contributions:{u'humid': nan, u'euse': nan, u'temp': nan, u'sec_since_rise': nan, u'timestamp_dayOfWeek': nan, u'timestamp_timeOfDay': nan, u'is_daylight': nan, u'buildup': nan, u'wind': nan, u'timestamp_weekend': nan}
+2015-07-18 08:28:32,170 - com.numenta.nupic.swarming.HypersearchWorker(8292) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=47, JOBID=1044> FINISHED. Evaluated 3 models.

@@ -1,0 +1,80 @@
+2015-07-18 07:45:04,916 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1046']
+2015-07-18 07:45:04,916 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-07-18 07:45:04,916 - com.numenta.nupic.database.Connection.ConnectionFactory(8744) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-07-18 07:45:04,956 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(8744) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-07-18 07:45:05,021 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=62
+2015-07-18 07:45:05,049 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1046', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "\x91\xea\xb1\xbc-[\x11\xe5\x98\xe1\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "6d1...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-07-18 14:45:01', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-07-18 07:45:05,089 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'euse',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '35.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'temp',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '110.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'humid',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '100.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'wind',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '50.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'is_daylight',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '0.0',
+                                       u'minValue': '1.0'},
+                                      {u'fieldName': 'buildup',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '100.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'sec_since_rise',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '50000',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'euse',
+                                     u'predictionSteps': ['4']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kwh',
+                                 u'streams': [{u'columns': ['timestamp',
+                                                            'euse',
+                                                            'temp',
+                                                            'humid',
+                                                            'wind',
+                                                            'is_daylight',
+                                                            'buildup',
+                                                            'sec_since_rise'],
+                                               u'info': 'weather_plus_7531',
+                                               u'source': 'file:///home/pat/workspace/pecan/house_data/7531_data/7531_clean...'}]},
+                  u'swarmSize': 'medium'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '6d153eb6-2d5b-11e5-98e1-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-07-18 07:46:35,190 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Active swarms changed to [u'modelParams|sensorParams|encoders|humid', u'modelParams|sensorParams|encoders|wind', u'modelParams|sensorParams|encoders|is_daylight', u'modelParams|sensorParams|encoders|sec_since_rise', u'modelParams|sensorParams|encoders|timestamp_timeOfDay', u'modelParams|sensorParams|encoders|timestamp_dayOfWeek', u'modelParams|sensorParams|encoders|buildup', u'modelParams|sensorParams|encoders|euse', u'modelParams|sensorParams|encoders|temp', u'modelParams|sensorParams|encoders|timestamp_weekend'] (from None)
+2015-07-18 07:46:35,733 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=4e3c2ea74ef0150409e0c2cfb8460377; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:35,767 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:35,801 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=d4fe0e94fd670f96fc8457a927cccef1; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:35,824 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:35,837 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=862ecbfd0f1926cbf9d3eb9b8f685ff1; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:35,868 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:35,876 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=5ebf7201049014ca53a684b8d640d6eb; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:35,915 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:35,931 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=e60491ef7f6bb60af5d3fe0677331485; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:35,974 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,010 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=7da5adc2075669c54473de3ce848dc4d; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:36,044 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,064 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=83b653ce3a47ee0ce2ae6aebc2aff0ab; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:36,100 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,112 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=484966201bcc1ff6d67cfcb96ec20711; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:36,137 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,160 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=784f6e278b7b8b0fbef8982833695911; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:36,199 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,215 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Model insert attempt failed with DUP_ENTRY: jobID=1046; paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2 OR particleHash=b87de188fa6eb133c70780795b77ba53; IntegrityError(1062, u"Duplicate entry '1046-d\\xC6z\\xA1\\xF1\\x10\\xAF\\xDCM\\xE9\\x9D\\x9C]\\xAB\\xE6\\xC2' for key 'job_id'")
+2015-07-18 07:46:36,230 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Adding model 4533 to our internal DB because modelInsertAndStart() failed to insert it: paramsHash=64c67aa1f110afdc4de99d9c5dabe6c2, particleHash=68f0fd9d5bbad7e116e5569b1e813a2c, particleId='60.0.0'
+2015-07-18 07:46:36,796 - com.numenta.nupic.swarming.HypersearchWorker(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> RUNNING MODEL GID=4564, paramsHash=8cc4fc4493e3aab34a64290e738c635b, params={'particleState': {'varStates': {'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, 'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, u'modelParams|sensorParams|encoders|euse:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|euse', 'id': '62.10'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 35.0, 'classifierOnly': True, 'minval': 0.0, 'clipInput': True, 'n': 275, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'humid': None, u'is_daylight': None, u'temp': None, u'sec_since_rise': None, u'timestamp_dayOfWeek': None, u'timestamp_timeOfDay': None, u'euse': {'maxval': 35.0, 'name': 'euse', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'euse', 'w': 21, 'type': 'ScalarEncoder'}, u'buildup': None, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2015-07-18 07:46:36,806 - com.numenta.nupic.hypersearch.utils(8744) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=62, JOBID=1046> Using experiment directory: /tmp/tmpyN510Q

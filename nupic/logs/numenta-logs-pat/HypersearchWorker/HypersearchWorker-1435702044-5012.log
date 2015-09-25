@@ -1,0 +1,76 @@
+2015-06-30 07:07:24,271 - com.numenta.nupic.swarming.HypersearchWorker(5012) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1028']
+2015-06-30 07:07:24,271 - com.numenta.nupic.swarming.HypersearchWorker(5012) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-06-30 07:07:24,271 - com.numenta.nupic.database.Connection.ConnectionFactory(5012) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-06-30 07:07:24,274 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(5012) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-06-30 07:07:24,286 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(5012) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=53
+2015-06-30 07:07:24,292 - com.numenta.nupic.swarming.HypersearchWorker(5012) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=53, JOBID=1028> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1028', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "T\x7f\x1b\xdf\x1f1\x11\xe5\x97X\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "547...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-06-30 14:07:23', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-06-30 07:07:24,295 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5012) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=53, JOBID=1028> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'temp',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '34.0',
+                                       u'minValue': '6.0'},
+                                      {u'fieldName': 'dewpt',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '22.0',
+                                       u'minValue': '-22.0'},
+                                      {u'fieldName': 'wind',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '14.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'is_daylight',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '1',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'elapsed',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '86400',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'kwh',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '5.18',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'kwh',
+                                     u'predictionSteps': ['1']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kw_energy_consumption',
+                                 u'streams': [{u'columns': ['*'],
+                                               u'info': 'San Diego',
+                                               u'source': 'file://sd_weather.csv'}],
+                                 u'version': '1'},
+                  u'swarmSize': 'medium'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': '547f1bde-1f31-11e5-9758-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-06-30 07:07:37,709 - root(5012) - ERROR - HypersearchWorker is exiting with unhandled exception; argv=['/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py', '--jobID=1028']
+Traceback (most recent call last):
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 609, in <module>
+    main(sys.argv)
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 551, in main
+    jobID = hst.run()
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchWorker.py", line 312, in run
+    cjDAO=cjDAO, jobID=options.jobID, logLevel=options.logLevel)
+  File "/home/pat/workspace/nupic/nupic/swarming/HypersearchV2.py", line 2519, in __init__
+    streamReader.getDataRowCount()
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 382, in getDataRowCount
+    record = self.getNextRecord()
+  File "/home/pat/workspace/nupic/nupic/data/stream_reader.py", line 327, in getNextRecord
+    preAggValues = self._recordStore.getNextRecord()
+  File "/home/pat/workspace/nupic/nupic/data/file_record_stream.py", line 374, in getNextRecord
+    record.append(self._adapters[i](f))
+  File "/home/pat/workspace/nupic/nupic/data/utils.py", line 56, in parseTimestamp
+    return datetime.datetime.strptime(s, pattern)
+  File "/usr/lib/python2.7/_strptime.py", line 299, in _strptime
+    if _getlang() != _TimeRE_cache.locale_time.lang:
+  File "/usr/lib/python2.7/_strptime.py", line 29, in _getlang
+    return locale.getlocale(locale.LC_TIME)
+  File "/home/pat/.envs/nupic/lib/python2.7/locale.py", line 562, in getlocale
+    return _parse_localename(localename)
+  File "/home/pat/.envs/nupic/lib/python2.7/locale.py", line 461, in _parse_localename
+    code = normalize(localename)
+  File "/home/pat/.envs/nupic/lib/python2.7/locale.py", line 405, in normalize
+    code = locale_alias.get(lookup_name, None)
+KeyboardInterrupt

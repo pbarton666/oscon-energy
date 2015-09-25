@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../extensions/core/build/release/include/nta/Version.hpp
+
+/home/pat/workspace/nupic/extensions/compare_nupic_core_version.cpp
+string.h
+-
+iostream
+-
+nta/Version.hpp
+-
+

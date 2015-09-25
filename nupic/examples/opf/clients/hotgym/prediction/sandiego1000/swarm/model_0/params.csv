@@ -1,0 +1,2 @@
+modelParams|clParams|alpha,modelParams|sensorParams|encoders|_classifierInput|n,modelParams|sensorParams|encoders|kw_energy_consumption:n,modelParams|sensorParams|encoders|timestamp_dayOfWeek:radius,modelParams|sensorParams|encoders|timestamp_timeOfDay:radius,modelParams|spParams|synPermInactiveDec,modelParams|tpParams|activationThreshold,modelParams|tpParams|minThreshold,modelParams|tpParams|pamLength
+0.025075000000000004,151,147,4.750000000000001,1.534950525975732,0.075075,13,10,2

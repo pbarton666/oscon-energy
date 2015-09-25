@@ -1,0 +1,58 @@
+2015-06-30 07:10:09,978 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Launched with command line arguments: ['--jobID=1029']
+2015-06-30 07:10:09,979 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Connecting to the jobs database
+2015-06-30 07:10:09,982 - com.numenta.nupic.database.Connection.ConnectionFactory(5043) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Creating db connection policy via provider <bound method type._createDefaultPolicy of <class 'nupic.database.Connection.ConnectionFactory'>>
+2015-06-30 07:10:10,001 - com.numenta.nupic.database.Connection.PooledConnectionPolicy(5043) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> Created PooledConnectionPolicy
+2015-06-30 07:10:10,010 - com.numenta.nupic.database.ClientJobsDAO.ClientJobsDAO(5043) - INFO - <BUILDID=N/A, WORKER=HS, WRKID=N/A, JOBID=N/A> clientJobsConnectionID=58
+2015-06-30 07:10:10,012 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Job info retrieved: {'engModelMilestones': 'None', 'clientInfo': '', 'numFailedWorkers': '0', 'engJobType': 'hypersearch', 'results': 'None', 'jobId': '1029', 'completionMsg': 'None', 'cancel': '0', 'engWorkerState': 'None', 'workerCompletionMsg': 'None', 'jobHash': "\xb7J\xd3I\x1f1\x11\xe5\x97X\x08\x00'\x16\xdf\xd4", 'genBaseDescription': 'None', 'completionReason': 'None', 'priority': '0', 'cmdLine': '$HYPERSEARCH', 'params': '{"hsVersion": "v2", "maxModels": null, "persistentJobGUID": "b74...', 'workerCompletionReason': 'success', 'engAllocateNewWorkers': '1', 'lastFailedWorkerErrorMsg': 'None', 'engUntendedDeadWorkers': '0', 'engLastUpdateTime': '2015-06-30 14:10:09', 'status': 'notStarted', 'engStatus': 'None', 'startTime': 'None', 'minimumWorkers': '1', 'endTime': 'None', 'engCjmConnId': 'None', 'genPermutations': 'None', 'client': 'GRP', 'engCleaningStatus': 'notdone', 'clientKey': '', 'maximumWorkers': '4'}
+2015-06-30 07:10:10,015 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> searchParams: 
+{u'description': {u'includedFields': [{u'fieldName': 'timestamp',
+                                       u'fieldType': 'datetime'},
+                                      {u'fieldName': 'temp',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '34.0',
+                                       u'minValue': '6.0'},
+                                      {u'fieldName': 'dewpt',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '22.0',
+                                       u'minValue': '-22.0'},
+                                      {u'fieldName': 'wind',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '14.0',
+                                       u'minValue': '0.0'},
+                                      {u'fieldName': 'is_daylight',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '1',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'elapsed',
+                                       u'fieldType': 'int',
+                                       u'maxValue': '86400',
+                                       u'minValue': '0'},
+                                      {u'fieldName': 'kwh',
+                                       u'fieldType': 'float',
+                                       u'maxValue': '5.18',
+                                       u'minValue': '0.0'}],
+                  u'inferenceArgs': {u'predictedField': 'kwh',
+                                     u'predictionSteps': ['1']},
+                  u'inferenceType': 'TemporalMultiStep',
+                  u'iterationCount': '-1',
+                  u'streamDef': {u'info': 'kw_energy_consumption',
+                                 u'streams': [{u'columns': ['*'],
+                                               u'info': 'San Diego',
+                                               u'source': 'file://sd_weather.csv'}],
+                                 u'version': '1'},
+                  u'swarmSize': 'medium'},
+ u'hsVersion': 'v2',
+ u'maxModels': 'None',
+ u'persistentJobGUID': 'b74ad348-1f31-11e5-9758-08002716dfd4',
+ u'useTerminators': 'False'}
+2015-06-30 07:10:29,406 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Active swarms changed to [u'modelParams|sensorParams|encoders|dewpt', u'modelParams|sensorParams|encoders|wind', u'modelParams|sensorParams|encoders|is_daylight', u'modelParams|sensorParams|encoders|elapsed', u'modelParams|sensorParams|encoders|kwh', u'modelParams|sensorParams|encoders|timestamp_timeOfDay', u'modelParams|sensorParams|encoders|timestamp_dayOfWeek', u'modelParams|sensorParams|encoders|temp', u'modelParams|sensorParams|encoders|timestamp_weekend'] (from None)
+2015-06-30 07:10:29,509 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> RUNNING MODEL GID=3156, paramsHash=3c482fa815a7992cf7f51b219ab8a61e, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.050050000000000004, 'bestPosition': 0.050050000000000004, '_position': 0.050050000000000004, 'velocity': 0.01998}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.5, 'velocity': 0.6}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 14, 'bestPosition': 14, '_position': 14.0, 'velocity': 0.8}, u'modelParams|sensorParams|encoders|kwh:n': {'bestResult': None, 'position': 272, 'bestPosition': 272, '_position': 271.5, 'velocity': 99.8}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 3, 'bestPosition': 3, '_position': 3.0, 'velocity': 0.8}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 275, 'bestPosition': 275, '_position': 274.5, 'velocity': 98.6}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.05015, 'bestPosition': 0.05015, '_position': 0.05015, 'velocity': 0.019940000000000003}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|kwh', 'id': '58.0'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 5.18, 'classifierOnly': True, 'minval': 0.0, 'clipInput': True, 'n': 275, 'fieldname': 'kwh', 'w': 21, 'type': 'ScalarEncoder'}, u'temp': None, u'kwh': {'maxval': 5.18, 'name': 'kwh', 'clipInput': True, 'minval': 0.0, 'n': 272, 'fieldname': 'kwh', 'w': 21, 'type': 'ScalarEncoder'}, u'dewpt': None, u'elapsed': None, u'timestamp_timeOfDay': None, u'is_daylight': None, u'timestamp_dayOfWeek': None, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.05015}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 14, 'pamLength': 3}, 'clParams': {'alpha': 0.050050000000000004}}}}
+2015-06-30 07:10:29,513 - com.numenta.nupic.hypersearch.utils(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Using experiment directory: /tmp/tmpGdcPGR
+2015-06-30 07:11:20,117 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Finished: modelID=3156; 921 records processed. Performing final activities
+2015-06-30 07:11:20,480 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Flushed prediction cache; numrows=921; elapsed=0.359389066696 sec.
+2015-06-30 07:11:20,514 - com.numenta.nupic.swarming.ModelRunner.OPFModelRunner(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Model 3156 chosen as best model
+2015-06-30 07:11:20,518 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> COMPLETED MODEL GID=3156; EVALUATED 1 MODELs
+2015-06-30 07:11:20,520 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> New best model after 4 evaluations: errScore 58.6243 on model 3153
+2015-06-30 07:11:20,521 - com.numenta.nupic.swarming.HypersearchV2.HypersearchV2(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> New best model after 4 evaluations: errScore 41.4733 on model 3156
+2015-06-30 07:11:20,700 - com.numenta.nupic.swarming.HypersearchWorker(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> RUNNING MODEL GID=3158, paramsHash=697101438fa5b0f996e4dba4d6e79e8c, params={'particleState': {'varStates': {'modelParams|clParams|alpha': {'bestResult': None, 'position': 0.06253750000000001, 'bestPosition': 0.050050000000000004, '_position': 0.06253750000000001, 'velocity': 0.0124875}, 'modelParams|tpParams|minThreshold': {'bestResult': None, 'position': 11, 'bestPosition': 11, '_position': 10.75, 'velocity': 0.25}, 'modelParams|tpParams|activationThreshold': {'bestResult': None, 'position': 15, 'bestPosition': 14, '_position': 14.5, 'velocity': 0.5}, u'modelParams|sensorParams|encoders|is_daylight:n': {'bestResult': None, 'position': 334, 'bestPosition': 272, '_position': 333.75, 'velocity': 62.25}, 'modelParams|tpParams|pamLength': {'bestResult': None, 'position': 4, 'bestPosition': 3, '_position': 3.5, 'velocity': 0.5}, 'modelParams|sensorParams|encoders|_classifierInput|n': {'bestResult': None, 'position': 336, 'bestPosition': 275, '_position': 336.0, 'velocity': 61.5}, 'modelParams|spParams|synPermInactiveDec': {'bestResult': None, 'position': 0.0626125, 'bestPosition': 0.05015, '_position': 0.0626125, 'velocity': 0.012462500000000001}}, 'genIdx': 0, 'swarmId': u'modelParams|sensorParams|encoders|is_daylight', 'id': '58.10'}, 'structuredParams': {'aggregationInfo': {'seconds': 0, 'fields': [], 'months': 0, 'days': 0, 'years': 0, 'hours': 0, 'microseconds': 0, 'weeks': 0, 'minutes': 0, 'milliseconds': 0}, 'modelParams': {'sensorParams': {'encoders': {'_classifierInput': {'maxval': 5.18, 'classifierOnly': True, 'minval': 0.0, 'clipInput': True, 'n': 336, 'fieldname': 'kwh', 'w': 21, 'type': 'ScalarEncoder'}, u'temp': None, u'kwh': None, u'dewpt': None, u'elapsed': None, u'timestamp_timeOfDay': None, u'is_daylight': {'maxval': 1, 'name': 'is_daylight', 'clipInput': True, 'minval': 0, 'n': 334, 'fieldname': 'is_daylight', 'w': 21, 'type': 'ScalarEncoder'}, u'timestamp_dayOfWeek': None, u'wind': None, u'timestamp_weekend': None}}, 'spParams': {'synPermInactiveDec': 0.0626125}, 'tpParams': {'minThreshold': 11, 'activationThreshold': 15, 'pamLength': 4}, 'clParams': {'alpha': 0.06253750000000001}}}}
+2015-06-30 07:11:20,700 - com.numenta.nupic.hypersearch.utils(5043) - INFO - <BUILDID=N/A, WORKER=HW, WRKID=58, JOBID=1029> Using experiment directory: /tmp/tmpGuVaAX
